@@ -1,0 +1,16 @@
+# For more configuration options, see https://github.com/coreos/flanneld/blob/master/Documentation/configuration.md
+
+[Unit]
+Description=flanneld Server
+After=network.target
+
+[Service]
+Type=simple
+# flannel logs to the journal directly, suppress double logging
+StandardOutput=null
+EnvironmentFile=-/etc/flanneld/flanneld.conf
+User=etcd
+ExecStart=/usr/bin/flanneld
+
+[Install]
+WantedBy=multi-user.target
