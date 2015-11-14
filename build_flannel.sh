@@ -1,7 +1,7 @@
 # build flannel debian package
 
 FLANNEL_VERSION=${FLANNEL_VERSION:-0.5.5}
-REV=${REV:-1}
+REV=${REV:-2}
 
 rm -f flannel/builds/flannel_$FLANNEL_VERSION_amd64.deb
 rm -rf flannel/source/flannel-$FLANNEL_VERSION

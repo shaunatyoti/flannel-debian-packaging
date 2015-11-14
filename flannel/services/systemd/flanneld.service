@@ -6,11 +6,9 @@ After=network.target
 
 [Service]
 Type=simple
-# flannel logs to the journal directly, suppress double logging
-StandardOutput=null
 EnvironmentFile=-/etc/flanneld/flanneld.conf
-User=etcd
-ExecStart=/usr/bin/flanneld
+User=flanneld
+ExecStart=/usr/sbin/flanneld
 
 [Install]
 WantedBy=multi-user.target
