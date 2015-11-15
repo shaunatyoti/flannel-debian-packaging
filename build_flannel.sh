@@ -1,7 +1,7 @@
 # build flannel debian package
 
 FLANNEL_VERSION=${FLANNEL_VERSION:-0.5.5}
-REV=${REV:-2}
+REV=${REV:-3}
 
 rm -f flannel/builds/flannel_$FLANNEL_VERSION_amd64.deb
 rm -rf flannel/source/flannel-$FLANNEL_VERSION
@@ -29,7 +29,6 @@ fpm -s dir -n "flannel" \
 -a amd64 \
 -d "dpkg (>= 1.17)" \
 --after-install ../scripts/deb/systemd/after-install.sh \
---before-install ../scripts/deb/systemd/before-install.sh \
 --after-remove ../scripts/deb/systemd/after-remove.sh \
 --before-remove ../scripts/deb/systemd/before-remove.sh \
 --config-files etc/flanneld \

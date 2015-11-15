@@ -7,7 +7,6 @@ After=network.target
 [Service]
 Type=simple
 EnvironmentFile=-/etc/flanneld/flanneld.conf
-User=flanneld
 ExecStart=/usr/sbin/flanneld
 
 [Install]
