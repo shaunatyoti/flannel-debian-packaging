@@ -12,7 +12,7 @@ mkdir -p flannel/downloads
 
 cd flannel/downloads
 
-if [ -f flannel-$FLANNEL_VERSION-linux-amd64.tar.gz ]; then
+if [ -f flannel-v$FLANNEL_VERSION-linux-amd64.tar.gz ]; then
   echo "already have the download ..."
 else
   wget https://github.com/coreos/flannel/releases/download/v$FLANNEL_VERSION/flannel-v$FLANNEL_VERSION-linux-amd64.tar.gz
