@@ -19,7 +19,7 @@ else
 fi
 
 cd ../source
-tar zxf ../downloads/flannel-$FLANNEL_VERSION-linux-amd64.tar.gz
+tar zxf ../downloads/flannel-v$FLANNEL_VERSION-linux-amd64.tar.gz
 
 fpm -s dir -n "flannel" \
 -p ../builds \
