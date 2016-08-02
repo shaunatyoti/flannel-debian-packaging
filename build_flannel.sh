@@ -26,7 +26,7 @@ cd ..
 
 fpm -s dir -n "flannel" \
 -p ../builds \
--C flannel-${FLANNEL_VERSION} \
+-C flannel-v${FLANNEL_VERSION} \
 -v ${FLANNEL_VERSION}-${REV} \
 -t deb \
 -a amd64 \
